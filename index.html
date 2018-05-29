@@ -1,0 +1,101 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <style>
+    #black {
+        background-color:black;
+        color:white;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="jumbotron jumbotron-fluid text-center" id="black">
+    <h1 id="black"> Toronto Train Schedule/h1>
+    <h2 id="black">Here is a comprehensive list of trains coming and going throughout the day</h2>
+    </div>
+    
+    <div class="row">
+        <div class="container">
+           
+    <table id="schedule" style="width:100%">
+        <thead id="black">
+            <tr>
+              <th data-field="train">Train Name</th>
+              <th data-field="destination">Destination</th> 
+              <th data-field="frequency">Frequency</th>
+              <th data-field="arrival">Next Arrival</th>
+              <th data-field="minutes">Minutes Away</th>
+             </tr>
+            </thead>
+            <tbody id="black">
+            <tr>
+                <td>The Union Train</td>
+                <td>Union Station</td>
+                <td>20</td>
+                <td>15:30</td>
+                <td>20</td>
+                
+            </tr>
+        </tbody>
+          </table>
+        
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="container">
+        <div class="col-md-12">
+        <form id="mainForm">
+          <div class="row">
+            <div class="input-field">
+              <label for="trainName">Train Name</label>
+              <input id="train_name" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field">
+              <label for="destination">Destination</label>
+              <input  id="destination" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field">
+              <label for="firstTrain">First Train Time (HH:MM) Miltary Time</label>
+              <input id="firstTrain" type="text" class="validate">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field">
+              <label for="frequency">Frequency (min)</label>
+              <input id="frequency" type="text" class="validate">
+            </div>
+          </div>
+          <button id="submit" class="btn" type="submit">Submit
+            <i class="material-icons right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+    </div>
+</div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="app.js"></script>
+</html>
